@@ -41,7 +41,7 @@ The investigation was conducted using:
 - Security-Desk
 
 **Operating System Tools:**
-- Linux command line utilities
+- Linux command line utilities<br>
 - Sleuth Kit forensic tools
 
 **Evidence File Created:**
@@ -107,13 +107,13 @@ Hashing is an important forensic process because it confirms that the evidence i
 
 The forensic image was analyzed using Sleuth Kit.
 The first step was identifying the partition structure:
-Bash
+ 
 mmls rob_usb.dd
 
 mmls displays partition information from a disk image, including: <br>
-• Partition type
-• Starting sector
-• Ending sector
+• Partition type<br>
+• Starting sector<br>
+• Ending sector<br>
 • Partition size
 
 The output showed that the main filesystem partition began at sector: 2048
@@ -124,13 +124,13 @@ This offset was required for further filesystem analysis.
 
 # Phase 5: Filesystem Examination
 
-The contents of the filesystem were examined using:
+The contents of the filesystem were examined using:<br>
 
-fls -o 2048 -d rob_usb.dd
+fls -o 2048 -d rob_usb.dd<br>
 
--o 2048 Specifies the filesystem offset
--d Displays deleted entries
--rob_usb.dd Forensic disk image
+-o 2048 Specifies the filesystem offset<br>
+-d Displays deleted entries<br>
+-rob_usb.dd Forensic disk image<br>
 
 The output did not reveal any obvious suspicious files. The visible filesystem contents appeared consistent with the original explanation that the drive contained only cat pictures.
 At this point, the investigation continued using a lower-level analysis method.
@@ -144,11 +144,11 @@ The following command was used:
 strings rob_usb.dd | less
 
 The strings utility extracts readable ASCIl and Unicode text from binary files.
-This technique can reveal:
-• Deleted text fragments
-• Embedded information
-• Data hidden outside normal filesystem structures
-• Residual information from previous files
+This technique can reveal:<br>
+• Deleted text fragments<br>
+• Embedded information<br>
+• Data hidden outside normal filesystem structures<br>
+• Residual information from previous files<br>
 During the review of the extracted strings, numerous references to credit card information were discovered.
 
 Further examination revealed sensitive financial information associated with: Penny Harris
@@ -176,10 +176,10 @@ This investigation demonstrated the importance of performing layered forensic an
 Although the USB drive appeared to contain only harmless images, deeper examination of the raw disk image revealed sensitive information that was
 not visible through normal file system inspection. 
 
-### Key forensic lessons:
-• Visible files do not always represent all stored data.
-• Deleted or concealed information may remain recoverable from raw storage.
-• Multiple analysis techniques should be used during digital investigations.
+### Key forensic lessons:<br>
+• Visible files do not always represent all stored data.<br>
+• Deleted or concealed information may remain recoverable from raw storage.<br>
+• Multiple analysis techniques should be used during digital investigations.<br>
 • Evidence should always be acquired and analyzed using forensic copies to maintain integrity.
 
 
