@@ -186,12 +186,12 @@ not visible through normal file system inspection.
 # Tools Used
 
 ### Tools 
-Isbik   Identified connected storage devices
-fdisk   Displayed disk partition information
-dd      Created forensic disk image
-sha256sum Verified evidence integrity
-mmls       Analyzed partition structure
-fls     Examined filesystem contents
+Isbik   Identified connected storage devices<br>
+fdisk   Displayed disk partition information<br>
+dd      Created forensic disk image<br>
+sha256sum Verified evidence integrity<br>
+mmls       Analyzed partition structure<br>
+fls     Examined filesystem contents<br>
 strings Extracted readable data from raw disk image
 
 
