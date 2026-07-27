@@ -72,15 +72,18 @@ The fdisk command was used to view detailed disk information including device si
 # Phase 2: Creating a Forensic Image
 
 To preserve the original evidence, a bit-for-bit forensic image of the USB device was created.
+
 The following command was used:
 
-sudo dd if=/dev/sdb of=rob_usb.dd bs=4M status=progress
+sudo dd if=/dev/sdb of=rob_usb.dd bs=4M status=progress <br>
 
+if=/dev/sdb Specifies the input USB device <br>
 
-if=/dev/sdb Specifies the input USB device
-of=rob_usb.dd Specifies the output forensic image file
-bs=4M Copies data in 4 megabyte blocks
-status=progress Displays acquisition progress
+of=rob_usb.dd Specifies the output forensic image file <br>
+
+bs=4M Copies data in 4 megabyte blocks <br>
+
+status=progress Displays acquisition progress <br>
 
 ### The resulting file:
 
