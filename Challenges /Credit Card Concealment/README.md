@@ -127,7 +127,7 @@ fls -o 2048 -d rob_usb.dd
 
 -o 2048 Specifies the filesystem offset
 -d Displays deleted entries
-- rob_usb.dd Forensic disk image
+-rob_usb.dd Forensic disk image
 
 The output did not reveal any obvious suspicious files. The visible filesystem contents appeared consistent with the original explanation that the drive contained only cat pictures.
 At this point, the investigation continued using a lower-level analysis method.
@@ -137,7 +137,7 @@ At this point, the investigation continued using a lower-level analysis method.
 
 Since filesystem analysis did not reveal suspicious files, the forensic image itself was examined.
 The following command was used:
-Bash
+
 strings rob_usb.dd | less
 
 The strings utility extracts readable ASCIl and Unicode text from binary files.
