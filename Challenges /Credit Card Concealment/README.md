@@ -110,7 +110,7 @@ The first step was identifying the partition structure:
 Bash
 mmls rob_usb.dd
 
-mmls displays partition information from a disk image, including:
+mmls displays partition information from a disk image, including: <br>
 • Partition type
 • Starting sector
 • Ending sector
