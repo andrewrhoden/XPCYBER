@@ -156,6 +156,8 @@ The concealed credit card number identified was: 62945496681673473
 
 ![alt text](<Screenshot 2026-07-26 at 10.51.07 PM.png>)
 
+![alt text](<Screenshot 2026-07-26 at 10.46.12 PM.png>)
+
 
 # Phase 7: Incident Response Submission
 
